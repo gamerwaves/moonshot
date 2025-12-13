@@ -1,3 +1,22 @@
-[gd_scene load_steps=0 format=3 uid="uid://bnbemt0edms7b"]
+[gd_scene load_steps=4 format=3 uid="uid://bnbemt0edms7b"]
+
+[ext_resource type="Texture2D" uid="uid://b6owbym0vdnvp" path="res://resources/brik.png" id="1_5xnpp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gli6d"]
+texture = ExtResource("1_5xnpp")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_277jj"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_gli6d")
 
 [node name="Room1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_277jj")
