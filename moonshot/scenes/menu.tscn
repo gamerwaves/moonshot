@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bid0781entd50"]
+
+[ext_resource type="Script" uid="uid://cndhpwdu11epv" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://bpxh1e6jvvwf1" path="res://resources/go.png" id="2_con2f"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjb58")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 285.0
+offset_right = 643.0
+offset_bottom = 362.0
+text = "GO"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 324.0
+offset_right = 462.0
+offset_bottom = 411.0
+texture = ExtResource("2_con2f")
+
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
