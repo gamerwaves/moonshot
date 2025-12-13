@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bid0781entd50"]
+[gd_scene load_steps=6 format=3 uid="uid://bid0781entd50"]
 
 [ext_resource type="Script" uid="uid://cndhpwdu11epv" path="res://scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://bpxh1e6jvvwf1" path="res://resources/go.png" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://cgw64ejw7mk8c" path="res://Untitled design.png" id="2_mhnvy"]
+[ext_resource type="VideoStream" uid="uid://bh4txgusi8oku" path="res://Your paragraph text.ogv" id="3_mhnvy"]
+[ext_resource type="Script" uid="uid://ibq6pqu655jd" path="res://scenes/video_stream_player.gd" id="5_4ytvr"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -12,20 +15,38 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vjb58")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575.49994, 324.49997)
+scale = Vector2(1.000868, 0.9984568)
+texture = ExtResource("2_mhnvy")
+
 [node name="Button" type="Button" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 509.0
-offset_top = 285.0
-offset_right = 643.0
-offset_bottom = 362.0
+offset_left = 497.0
+offset_top = 372.0
+offset_right = 631.0
+offset_bottom = 449.0
 text = "GO"
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
-offset_left = 323.0
-offset_top = 324.0
-offset_right = 462.0
-offset_bottom = 411.0
+offset_left = 503.0
+offset_top = 507.0
+offset_right = 642.0
+offset_bottom = 594.0
 texture = ExtResource("2_con2f")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = -4.999939
+offset_top = 10.0
+offset_right = 1147.0
+offset_bottom = 658.0
+stream = ExtResource("3_mhnvy")
+autoplay = true
+script = ExtResource("5_4ytvr")
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
