@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bid0781entd50"]
 
 [ext_resource type="Script" uid="uid://cndhpwdu11epv" path="res://scripts/menu.gd" id="1_vjb58"]
-[ext_resource type="Texture2D" uid="uid://bpxh1e6jvvwf1" path="res://resources/go.png" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://cgw64ejw7mk8c" path="res://resources/design.png" id="2_mhnvy"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,9 +13,9 @@ grow_vertical = 2
 script = ExtResource("1_vjb58")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(575.49994, 324.49997)
 scale = Vector2(1.000868, 0.9984568)
+texture = ExtResource("2_mhnvy")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -23,18 +23,6 @@ offset_left = 497.0
 offset_top = 372.0
 offset_right = 631.0
 offset_bottom = 449.0
-text = "GO"
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(575.49994, 324.49997)
-scale = Vector2(1.000868, 0.9984568)
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 503.0
-offset_top = 507.0
-offset_right = 642.0
-offset_bottom = 594.0
-texture = ExtResource("2_con2f")
+text = "START"
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
