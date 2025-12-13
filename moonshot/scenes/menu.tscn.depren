@@ -1,0 +1,5 @@
+[gd_scene load_steps=4 format=3 uid="uid://bid0781entd50"]
+
+[ext_resource type="Script" uid="uid://cndhpwdu11epv" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://bpxh1e6jvvwf1" path="res://resources/go.png" id="2_con2f"]
+[ext_resource type="Texture2D" uid="uid://cgw64ejw7mk8c" path="res://resources/design.png" id="2_mhnvy"]
