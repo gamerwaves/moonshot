@@ -1,3 +1,10 @@
-[gd_scene load_steps=0 format=3 uid="uid://dn16vahtt5ng5"]
+[gd_scene load_steps=2 format=3 uid="uid://dn16vahtt5ng5"]
+
+[ext_resource type="Texture2D" uid="uid://ddioiq7jfnwfa" path="res://resources/Second Frame.png" id="1_o5qli"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_o5qli")
