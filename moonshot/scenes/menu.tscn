@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cndhpwdu11epv" path="res://scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://lts5wf6up5qb" path="res://resources/titlesprites.png" id="2_con2f"]
 [ext_resource type="Texture2D" uid="uid://cgw64ejw7mk8c" path="res://resources/design.png" id="2_mhnvy"]
-[ext_resource type="Script" uid="uid://cqrn8uud64mf4" path="res://scripts/menuGif.gd" id="3_mhnvy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhnvy"]
 atlas = ExtResource("2_con2f")
@@ -540,10 +539,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tm5p4")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 30.0
 }]
+
+[sub_resource type="GDScript" id="GDScript_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -559,8 +560,8 @@ z_index = 1
 position = Vector2(573, 307)
 sprite_frames = SubResource("SpriteFrames_vvgcj")
 autoplay = "default"
-frame_progress = 0.9817028
-script = ExtResource("3_mhnvy")
+frame_progress = 0.19545056
+script = SubResource("GDScript_con2f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(575.49994, 324.49997)
