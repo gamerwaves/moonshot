@@ -1,11 +1,11 @@
-[gd_scene load_steps=40 format=3 uid="uid://wjllganae2yr"]
+[gd_scene load_steps=40 format=3 uid="uid://chmjaxk17kdh"]
 
-[ext_resource type="Script" uid="uid://2gurmgjp8qab" path="res://scripts/playermovement.gd" id="1_gy1q1"]
-[ext_resource type="Script" uid="uid://h24uwkvb3avi" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
-[ext_resource type="Script" uid="uid://dayc3f51hel4x" path="res://scripts/fallingObject.gd" id="2_h265l"]
-[ext_resource type="Texture2D" path="res://resources/character.jpg" id="3_e333d"]
+[ext_resource type="Script" uid="uid://csd82yqdmm5bi" path="res://scripts/playermovement.gd" id="1_gy1q1"]
+[ext_resource type="Script" uid="uid://mqs3q61hu4nq" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
+[ext_resource type="Script" uid="uid://dunt684efehhi" path="res://scripts/fallingObject.gd" id="2_h265l"]
+[ext_resource type="Texture2D" uid="uid://ti6a2xxxpob3" path="res://resources/character.jpg" id="3_e333d"]
 [ext_resource type="Texture2D" uid="uid://dexm0juhwlecr" path="res://resources/character.png" id="3_jsfs4"]
-[ext_resource type="Texture2D" uid="uid://b6owbym0vdnvp" path="res://resources/brik.png" id="5_jsfs4"]
+[ext_resource type="Texture2D" uid="uid://x6nyqhjir2ur" path="res://resources/star.png" id="6_jsfs4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrltq"]
 atlas = ExtResource("3_jsfs4")
@@ -260,7 +260,8 @@ sprite_frames = SubResource("SpriteFrames_jrltq")
 script = ExtResource("2_h265l")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("5_jsfs4")
+position = Vector2(344, 0)
+texture = ExtResource("6_jsfs4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
