@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Moonshot"
-run/main_scene="uid://bid0781entd50"
+run/main_scene="uid://bj0rrdwh21000"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Gamemanager="*res://scripts/gamemanager.gd"
+
 [input]
 
 star_left={

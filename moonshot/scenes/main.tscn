@@ -10,11 +10,19 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_o5qli")
 
-[node name="Button" type="Button" parent="."]
+[node name="Buttonstar" type="Button" parent="."]
 offset_left = 968.0
 offset_top = 184.0
 offset_right = 1098.0
 offset_bottom = 358.0
 script = ExtResource("2_0wfyh")
 
-[connection signal="pressed" from="Button" to="Button" method="startStargazing"]
+[node name="Buttonmaz" type="Button" parent="."]
+offset_left = 66.0
+offset_top = 235.0
+offset_right = 210.0
+offset_bottom = 388.0
+script = ExtResource("2_0wfyh")
+
+[connection signal="pressed" from="Buttonstar" to="Buttonstar" method="startStargazing"]
+[connection signal="pressed" from="Buttonmaz" to="Buttonstar" method="mazebutton"]
