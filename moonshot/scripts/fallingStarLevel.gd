@@ -10,3 +10,4 @@ func _on_spawn_timer_timeout():
 		-50
 	)
 	add_child(obj)
+	
