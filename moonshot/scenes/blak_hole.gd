@@ -10,4 +10,6 @@ func _process(delta):
 		position.y = 0
 
 func _on_body_entered(body: Node2D) -> void:
-	OS.kill(1)
+	Gamemanager.mazeCompleted = false
+	Gamemanager.starCompleted = false
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
