@@ -576,4 +576,8 @@ offset_right = 631.0
 offset_bottom = 449.0
 text = "START"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(575.49994, 324.49997)
+scale = Vector2(1.000868, 0.9984568)
+
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
