@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://c73lwfdb365hm"]
+[gd_scene load_steps=3 format=3 uid="uid://5vshxnv54wep"]
 
-[ext_resource type="Script" path="res://scenes/intros/two.gd" id="1_1jpgb"]
+[ext_resource type="Script" uid="uid://dswe6kmkwuitx" path="res://scenes/intros/two.gd" id="1_1jpgb"]
 [ext_resource type="Texture2D" uid="uid://ds0rwdcx14fu0" path="res://resources/2.png" id="1_4lko7"]
 
 [node name="Two" type="Node2D"]
