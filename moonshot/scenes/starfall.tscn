@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://chmjaxk17kdh"]
+[gd_scene load_steps=43 format=3 uid="uid://chmjaxk17kdh"]
 
 [ext_resource type="Script" uid="uid://csd82yqdmm5bi" path="res://scripts/playermovement.gd" id="1_gy1q1"]
 [ext_resource type="Script" uid="uid://mqs3q61hu4nq" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ti6a2xxxpob3" path="res://resources/character.jpg" id="3_e333d"]
 [ext_resource type="Texture2D" uid="uid://dexm0juhwlecr" path="res://resources/character.png" id="3_jsfs4"]
 [ext_resource type="Texture2D" uid="uid://x6nyqhjir2ur" path="res://resources/star.png" id="6_jsfs4"]
+[ext_resource type="Texture2D" uid="uid://dv0jy4knnx7di" path="res://resources/black-bg.png" id="7_0swdd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrltq"]
 atlas = ExtResource("3_jsfs4")
@@ -244,27 +245,49 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0swdd"]
+size = Vector2(44, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrisq"]
+size = Vector2(33, 33)
+
 [node name="Stars" type="Node2D"]
 script = ExtResource("1_l7dsu")
 
 [node name="player" type="CharacterBody2D" parent="."]
+collision_mask = 2
 script = ExtResource("1_gy1q1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
-position = Vector2(592, 616)
+position = Vector2(32, 616)
 sprite_frames = SubResource("SpriteFrames_jrltq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2(31, 616)
+shape = SubResource("RectangleShape2D_0swdd")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
 script = ExtResource("2_h265l")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(344, 0)
+position = Vector2(592, -24)
 texture = ExtResource("6_jsfs4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(591.5, -23.5)
+shape = SubResource("RectangleShape2D_wrisq")
 
 [node name="CountdownLabel" type="Label" parent="."]
+offset_top = 17.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_0swdd")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

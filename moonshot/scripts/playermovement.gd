@@ -14,3 +14,9 @@ func _physics_process(delta):
 	velocity.y = 0
 
 	move_and_slide()
+
+	# --- Keep character inside the screen ---
+	var viewport_size = get_viewport_rect().size
+
+	position.x = clamp(position.x, 0, 1100)
+	position.y = clamp(position.y, 0, 648)
