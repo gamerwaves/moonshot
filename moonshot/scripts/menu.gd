@@ -6,4 +6,5 @@ func _on_button_button_up() -> void:
 
 
 func startStargazing() -> void:
-	get_tree().change_scene_to_file("res://scenes/starfall.tscn")
+	if Gamemanager.starCompleted == true:
+		get_tree().change_scene_to_file("res://scenes/starfall.tscn")

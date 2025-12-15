@@ -10,3 +10,6 @@ func _on_spawn_timer_timeout():
 		-50
 	)
 	add_child(obj)
+
+func _process(delta):
+	$CountdownLabel.text = "Stars: " + str(Gamemanager.starCountdown)
