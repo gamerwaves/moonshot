@@ -13,3 +13,8 @@ func startStargazing() -> void:
 func mazebutton() -> void:
 	if Gamemanager.mazeCompleted == false:
 		get_tree().change_scene_to_file("res://scenes/maze.tscn")
+
+
+func maindoor() -> void:
+	if Gamemanager.gameFinished:
+		get_tree().change_scene_to_file("res://scenes/maze.tscn")
