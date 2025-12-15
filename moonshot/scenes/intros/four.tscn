@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://h7hu5v013fs0"]
+
+[ext_resource type="Script" uid="uid://25dln4b68u8u" path="res://scripts/four.gd" id="1_4p031"]
+[ext_resource type="Texture2D" uid="uid://d2npnqo7aeyur" path="res://resources/4.png" id="1_te0my"]
+
+[node name="Four" type="Node2D"]
+script = ExtResource("1_4p031")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_te0my")

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://chq30k6mytj2r" path="res://resources/tileset.jpg" id="2_gli6d"]
 [ext_resource type="Script" uid="uid://dew58xet6hm1a" path="res://scripts/mazeplayer.gd" id="3_vqf1n"]
 [ext_resource type="Texture2D" uid="uid://dexm0juhwlecr" path="res://resources/character.png" id="4_8hln8"]
-[ext_resource type="Script" uid="uid://qm2xehnnese" path="res://scenes/endmaze.gd" id="5_8hln8"]
+[ext_resource type="Script" uid="uid://qm2xehnnese" path="res://scripts/endmaze.gd" id="5_8hln8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_277jj"]
 texture = ExtResource("1_5xnpp")
