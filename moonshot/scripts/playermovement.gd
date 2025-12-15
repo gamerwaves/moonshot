@@ -6,9 +6,9 @@ extends CharacterBody2D
 func _physics_process(delta):
 	var direction := 0
 
-	if Input.is_action_pressed("star_left"):
+	if Input.is_action_pressed("left"):
 		direction -= 1
-	if Input.is_action_pressed("star_right"):
+	if Input.is_action_pressed("right"):
 		direction += 1
 
 	velocity.x = direction * speed

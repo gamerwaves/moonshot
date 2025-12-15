@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyl1xdlytecuy"]
-
-[ext_resource type="Script" uid="uid://cl8cieo445bas" path="res://scenes/drawtest.gd" id="1_pe2bo"]
-
-[node name="Drawtest" type="Node2D"]
-script = ExtResource("1_pe2bo")
-
-[node name="Line2D" type="Line2D" parent="."]

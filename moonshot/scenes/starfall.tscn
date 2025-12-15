@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://bcfp40cmkfjsw"]
 
 [ext_resource type="Script" uid="uid://csd82yqdmm5bi" path="res://scripts/playermovement.gd" id="1_gy1q1"]
-[ext_resource type="Script" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
+[ext_resource type="Script" uid="uid://mqs3q61hu4nq" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
 [ext_resource type="Script" path="res://scripts/fallingObject.gd" id="2_h265l"]
 [ext_resource type="Texture2D" uid="uid://dexm0juhwlecr" path="res://resources/character.png" id="3_jsfs4"]
 [ext_resource type="Texture2D" uid="uid://x6nyqhjir2ur" path="res://resources/star.png" id="6_jsfs4"]
