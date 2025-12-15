@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bcfp40cmkfjsw"]
+[gd_scene load_steps=26 format=3 uid="uid://bcfp40cmkfjsw"]
 
 [ext_resource type="Script" uid="uid://csd82yqdmm5bi" path="res://scripts/playermovement.gd" id="1_gy1q1"]
 [ext_resource type="Script" uid="uid://mqs3q61hu4nq" path="res://scripts/fallingStarLevel.gd" id="1_l7dsu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dexm0juhwlecr" path="res://resources/character.png" id="3_jsfs4"]
 [ext_resource type="Texture2D" uid="uid://x6nyqhjir2ur" path="res://resources/star.png" id="6_jsfs4"]
 [ext_resource type="Texture2D" uid="uid://dv0jy4knnx7di" path="res://resources/black-bg.png" id="7_0swdd"]
+[ext_resource type="Script" uid="uid://17mi3ecp14m4" path="res://scenes/blak_hole.gd" id="7_c1mvo"]
+[ext_resource type="Texture2D" uid="uid://c5xs2wi2jny01" path="res://resources/blakhole.png" id="7_wrisq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jrltq"]
 atlas = ExtResource("3_jsfs4")
@@ -165,5 +167,31 @@ offset_right = 1154.0
 offset_bottom = 648.0
 texture = ExtResource("7_0swdd")
 
+[node name="blak hole" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("7_c1mvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="blak hole"]
+position = Vector2(592, -24)
+texture = ExtResource("7_wrisq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blak hole"]
+position = Vector2(250, -24)
+shape = SubResource("RectangleShape2D_wrisq")
+
+[node name="blak hole2" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("7_c1mvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="blak hole2"]
+position = Vector2(592, -24)
+texture = ExtResource("7_wrisq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blak hole2"]
+position = Vector2(250, -24)
+shape = SubResource("RectangleShape2D_wrisq")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="blak hole" to="blak hole" method="_on_body_entered"]
+[connection signal="body_entered" from="blak hole2" to="blak hole2" method="_on_body_entered"]
