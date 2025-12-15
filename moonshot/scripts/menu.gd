@@ -11,4 +11,4 @@ func startStargazing() -> void:
 
 
 func mazebutton() -> void:
-	get_tree().change_scene_to_file("res://scenes/room1.tscn")
+	get_tree().change_scene_to_file("res://scenes/maze.tscn")
