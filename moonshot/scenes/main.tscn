@@ -15,6 +15,7 @@ offset_left = 968.0
 offset_top = 184.0
 offset_right = 1098.0
 offset_bottom = 358.0
+theme_type_variation = &"FlatButton"
 script = ExtResource("2_0wfyh")
 
 [node name="Buttonmaz" type="Button" parent="."]
@@ -22,7 +23,17 @@ offset_left = 66.0
 offset_top = 235.0
 offset_right = 210.0
 offset_bottom = 388.0
+theme_type_variation = &"FlatButton"
+script = ExtResource("2_0wfyh")
+
+[node name="Buttondoor" type="Button" parent="."]
+offset_left = 499.0
+offset_top = 230.0
+offset_right = 652.0
+offset_bottom = 471.0
+theme_type_variation = &"FlatButton"
 script = ExtResource("2_0wfyh")
 
 [connection signal="pressed" from="Buttonstar" to="Buttonstar" method="startStargazing"]
 [connection signal="pressed" from="Buttonmaz" to="Buttonstar" method="mazebutton"]
+[connection signal="pressed" from="Buttondoor" to="Buttondoor" method="doorbutton"]
