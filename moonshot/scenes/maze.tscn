@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bnbemt0edms7b"]
+[gd_scene load_steps=26 format=4 uid="uid://bnbemt0edms7b"]
 
 [ext_resource type="Texture2D" uid="uid://b6owbym0vdnvp" path="res://resources/brik.png" id="1_5xnpp"]
 [ext_resource type="Texture2D" uid="uid://chq30k6mytj2r" path="res://resources/tileset.jpg" id="2_gli6d"]
@@ -2889,14 +2889,6 @@ region = Rect2(256, 64, 64, 64)
 atlas = ExtResource("4_8hln8")
 region = Rect2(320, 64, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2mnj1"]
-atlas = ExtResource("4_8hln8")
-region = Rect2(384, 64, 64, 64)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fmjqh"]
-atlas = ExtResource("4_8hln8")
-region = Rect2(448, 64, 64, 64)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_crgmj"]
 animations = [{
 "frames": [{
@@ -2917,7 +2909,12 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jc0mt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
 }, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8g47x")
 }, {
@@ -2941,16 +2938,10 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mrjgc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2mnj1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fmjqh")
 }],
 "loop": true,
-"name": &"default",
-"speed": 5.0
+"name": &"walk",
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ykl68"]
@@ -2976,6 +2967,7 @@ script = ExtResource("3_vqf1n")
 position = Vector2(636, 627)
 scale = Vector2(0.4296875, 0.4296875)
 sprite_frames = SubResource("SpriteFrames_crgmj")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(636, 627)
