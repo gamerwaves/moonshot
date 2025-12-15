@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://ciuyxqup7wgvl"]
+[gd_scene load_steps=53 format=3 uid="uid://crktji5snc2fo"]
 
 [ext_resource type="Texture2D" uid="uid://k32pv5nwd5s6" path="res://resources/5.png" id="1_mr3vo"]
 
@@ -355,9 +355,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_bj0gn")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 30.0
 }]
 
 [node name="Five" type="Node2D"]
